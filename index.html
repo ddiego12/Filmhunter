@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmHunter</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+        header {
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            max-width: 400px;
+        }
+        .search-input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px 0 0 8px;
+            outline: none;
+            background-color: #f0f0f0;
+        }
+        .search-button {
+            padding: 10px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+        .search-button svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+    </style>
+    <script>
+        function handleSearch() {
+            document.body.style.backgroundColor = 'green';
+            document.body.innerHTML = '';
+        }
+    </script>
+</head>
+<body>
+    <header>FilmHunter</header>
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Buscar películas...">
+        <button class="search-button" onclick="handleSearch()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M10 2a8 8 0 105.3 14.7l5 5a1 1 0 001.4-1.4l-5-5A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"></path>
+            </svg>
+        </button>
+    </div>
+</body>
+</html>
+
